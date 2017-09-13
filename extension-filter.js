@@ -8,11 +8,12 @@ let test = (p, ext) => {
         if (err) {
             throw err;
         }
-        var x = files.filter((each) => {
+        files.filter((each) => {
             // console.log(each + ' ' + path.extname(each) + ' ' + ext);
             return path.extname(each) === ext;
+        }).forEach((file) => {
+            console.log(file);
         });
-        console.log(x);
     });
 };
 
